@@ -26,16 +26,16 @@ abstract class DuskTestCase extends BaseTestCase
      *
      * @return \Facebook\WebDriver\Remote\RemoteWebDriver
      */
-    protected function driver()
-    {
-        return RemoteWebDriver::create(
-            'http://localhost:9515', DesiredCapabilities::chrome()
-        );
-    }
     // protected function driver()
     // {
     //     return RemoteWebDriver::create(
-    //         'http://selenium-ch:4444/wd/hub', DesiredCapabilities::chrome()
+    //         'http://localhost:9515', DesiredCapabilities::chrome()
     //     );
     // }
+    protected function driver()
+    {
+        return RemoteWebDriver::create(
+            'http://selenium-ch:4444/wd/hub', DesiredCapabilities::chrome()
+        );
+    }
 }
